@@ -15,7 +15,7 @@ TUTO Youtube : https://www.youtube.com/watch?v=
 - Network Connection
 
 
-### Install script for yiimp on Ubuntu 16.04
+### Install script to get PNX wallet on Ubuntu 16.04
 
 USE THIS SCRIPT ON FRESH INSTALL UBUNTU 16.04 !
 
