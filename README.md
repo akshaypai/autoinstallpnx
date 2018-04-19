@@ -4,7 +4,7 @@ Website: http://phantomx.co
 
 Telegram Group: https://t.me/joinchat/GuzdQUN9fdpX3fSJ4bqWTQ
 
-TUTO Youtube : https://www.youtube.com/watch?v=
+TUTO Youtube : https://youtu.be/4oo4CqRBMh8
 
 ***********************************
 
@@ -42,7 +42,7 @@ To stop the wallet (previous started)
 
 To get actual info from the running pnx wallet
 
-    /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet -getinfo
+    /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet getinfo
 
 
 ### Donate
