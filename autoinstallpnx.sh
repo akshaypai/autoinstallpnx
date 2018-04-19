@@ -3,7 +3,7 @@
 # Original Author:   Alex Lucas
 # Forked from: https://github.com/phantomxdev/phantomx
 # Web: http://www.phantomx.org
-#
+# Version: 1.2
 #
 # Usage:
 #   This script is for auto-compile the PNX wallet taken from github official
@@ -65,16 +65,25 @@ sudo apt-get install -y unzip
 ###############################################################################
 
 outputColorYellow "############################################################"
-outputColorYellow "###     Creating a Swap File for < 4Gb Ram servers       ###"
+outputColorYellow "###     Creating a Swap File for < 1Gb Ram servers       ###"
 outputColorYellow "############################################################"
 
-sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=2048
-sudo /sbin/mkswap /var/swap.1
-sudo chmod 600 /var/swap.1
-sudo /sbin/swapon /var/swap.1
+lineSwap=$(awk '/MemTotal/ { print $2 }' /proc/meminfo)
+#echo "$line"
 
-##Need to autoedit file to add at the boot (Appends this line to that file)
-echo "/var/swap.1 swap swap defaults 0 0" >> /etc/fstab
+if [ $lineSwap -le 1024 ]
+ then
+   echo "Not enought RAM, so creating a 2 Gb swap file"
+   sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=2048
+   sudo /sbin/mkswap /var/swap.1
+   sudo chmod 600 /var/swap.1
+   sudo /sbin/swapon /var/swap.1
+
+    ##Need to autoedit file to add at the boot (Appends this line to that file)
+    echo "/var/swap.1 swap swap defaults 0 0" >> /etc/fstab
+ else
+    echo "Enought RAM on system, not need to create swap file"
+fi
 
 ###############################################################################
 ###############################################################################
