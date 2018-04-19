@@ -15,37 +15,37 @@ TUTO Youtube : https://www.youtube.com/watch?v=
 - Network Connection
 
 
-## Install script for yiimp on Ubuntu 16.04
+### Install script for yiimp on Ubuntu 16.04
 
 USE THIS SCRIPT ON FRESH INSTALL UBUNTU 16.04 !
 
-Connect on your VPS & execute the following commands:
+Connect on your VPS & execute the following commands
 
-  cd /home
-  wget http://....
-  sudo chmod +x autoinstallpnx.sh
-  ./autoinstallpnx.sh
+    cd /home
+    wget http://....
+    sudo chmod +x autoinstallpnx.sh
+    ./autoinstallpnx.sh
 
 Now the script will auto start to compile and to download the latest blockchain
 
 
 
-## To run the wallet & other useful info:
+### To run the wallet & other useful info:
 
 To run the wallet as daemon (once you execute this command you can close the terminal and the wallet will continue working)
 
-  /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet -daemon -start
+    /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet -daemon -start
 
 To stop the wallet (previous started)
 
-  /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet stop
+    /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet stop
 
 To get actual info from the running pnx wallet
 
-   /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet -getinfo
+    /wallets/phantomx/phantomxd  -datadir=/wallets/phantomx/wallet -getinfo
 
 
-## Donate
+### Donate
 
 If this helped you or you feel giving please donate :
  - PNX: PGkXignbZEK7g4e26ijk8JpnPnQUFL9xkj
