@@ -22,7 +22,7 @@ USE THIS SCRIPT ON FRESH INSTALL UBUNTU 16.04 !
 Connect on your VPS & execute the following commands
 
     cd /home
-    wget http://....
+    wget https://raw.githubusercontent.com/PhantomxTeam/autoinstallpnx/master/autoinstallpnx.sh
     sudo chmod +x autoinstallpnx.sh
     ./autoinstallpnx.sh
 
